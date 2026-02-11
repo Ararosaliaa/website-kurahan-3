@@ -26,11 +26,12 @@
         }
     </style>
 </head>
-<body>
+
+<body class="d-flex flex-column min-vh-100">
 
 @include('components.navbar')
 
-<main class="py-4">
+<main class="flex-fill py-4">
     @yield('content')
 </main>
 

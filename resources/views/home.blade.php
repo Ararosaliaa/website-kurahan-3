@@ -5,20 +5,27 @@
 @section('content')
 
 {{-- ================= HERO ================= --}}
-<section class="hero text-center py-5 bg-light">
-    <div class="container">
-        <h1 class="fw-bold">Selamat Datang di Website Padukuhan Kurahan III</h1>
-        <p class="mt-3 text-muted">
+<section class="hero-section d-flex align-items-center text-center text-white">
+    <div class="overlay"></div>
+
+    <div class="container position-relative">
+        <h1 class="fw-bold display-5">
+            Selamat Datang di Website Padukuhan Kurahan III
+        </h1>
+        <p class="mt-3 fs-5">
             Informasi kegiatan dan berita terbaru seputar Padukuhan Kurahan III
         </p>
     </div>
 </section>
 
+
 {{-- ================= DESKRIPSI SINGKAT ================= --}}
 <section class="py-4 bg-white">
     <div class="container text-center">
         <p class="lead text-muted">
-            Website Padukuhan Kurahan 3 hadir sebagai media informasi dan komunikasi resmi yang bertujuan untuk meningkatkan transparansi, pelayanan publik, serta partisipasi masyarakat dalam kehidupan bermasyarakat. Melalui website ini, warga dapat mengakses berbagai informasi terkait kegiatan padukuhan, berita terbaru, pengumuman penting, serta dokumentasi aktivitas kemasyarakatan secara mudah, cepat, dan terbuka.
+            Website Padukuhan Kurahan 3 hadir sebagai media informasi dan komunikasi resmi yang bertujuan untuk 
+            <br>meningkatkan transparansi, pelayanan publik, serta partisipasi masyarakat dalam kehidupan bermasyarakat.
+            Melalui website ini, warga dapat mengakses berbagai informasi terkait kegiatan padukuhan, berita terbaru, pengumuman penting, serta dokumentasi aktivitas kemasyarakatan secara mudah, cepat, dan terbuka.</br>
         </p>
     </div>
 </section>
@@ -52,8 +59,8 @@
 
                     <div class="mt-3">
                         <a href="{{ route('kegiatan.show',$item->id) }}"
-                           class="btn btn-sm btn-primary">
-                            Detail
+                           class="btn btn-sm btn-outline-primary">
+                            Lihat Detail
                         </a>
                     </div>
                 </div>
@@ -116,23 +123,25 @@
             </p>
         </div>
 
+        <div class="row justify-content-center">
+    <div class="col-lg-8 col-md-10">
         <div class="ratio ratio-16x9 shadow rounded overflow-hidden">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d247.09214979992927!2d110.28799342558887!3d-7.739398321621087!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e7af79071748d97%3A0x3282023fa8e2c870!2sDewiSri%20Massage!5e0!3m2!1sen!2sid!4v1769604937124!5m2!1sen!2sid" 
-            width="600" 
-            height="450" 
-            style="border:0;" 
-            allowfullscreen="" 
-            loading="lazy" 
-            referrerpolicy="no-referrer-when-downgrade">
-        </iframe>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d247.09214979992927!2d110.28799342558887!3d-7.739398321621087!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e7af79071748d97%3A0x3282023fa8e2c870!2sDewiSri%20Massage!5e0!3m2!1sen!2sid!4v1769604937124!5m2!1sen!2sid"
+                style="border:0;"
+                allowfullscreen
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
         </div>
     </div>
+</div>
 </section>
 
 @endsection
 
 {{-- ================= STYLE TAMBAHAN ================= --}}
-@push('styles')
+@section('content')
+
 <style>
 .kegiatan-card {
     transition: .3s ease;
@@ -141,8 +150,27 @@
     transform: translateY(-6px);
     box-shadow: 0 12px 30px rgba(0,0,0,.15);
 }
-.hero {
-    background: linear-gradient(120deg,#f8f9fa,#e9ecef);
+
+.hero-section {
+    min-height: calc(60vh - 10px); /* tinggi navbar */
+    margin-top: -30px;              /* tarik hero ke atas */
+    padding-top: 70px;              /* biar teks nggak ketutup */
+    background-image: url('{{ asset('images/hero-desa.jpg') }}');
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+
+.hero-section .overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.55);
+}
+
+.hero-section h1,
+.hero-section p {
+    text-shadow: 0 2px 6px rgba(0,0,0,0.6);
 }
 </style>
-@endpush
+

@@ -3,19 +3,92 @@
 @section('title','Tentang Kami')
 
 @section('content')
-<div class="container">
-    <h3 class="mb-4">Tentang Desa</h3>
 
-    <div class="card shadow-sm">
-        <div class="card-body">
-            <p>
-                    Padukuhan Kurahan 3 merupakan salah satu wilayah padukuhan yang memiliki peran penting dalam kehidupan sosial dan pemerintahan desa. Dengan luas wilayah kurang lebih ±27 hektar, Padukuhan Kurahan 3 menjadi ruang hidup masyarakat yang dinamis, harmonis, serta terus berkembang seiring dengan upaya pembangunan dan pemberdayaan warga. Secara geografis, Padukuhan Kurahan 3 berbatasan langsung dengan Padukuhan Kurahan IV dan Japanan di sebelah utara, Kandangan di sebelah selatan, Pendekan di sebelah barat, serta Kandangan dan Japanan di sebelah timur, yang menjadikannya berada pada posisi strategis dalam lingkungan desa.
-
-                    Padukuhan Kurahan 3 dipimpin oleh Dukuh Estu Primaningtyas Wikanthi yang berperan aktif dalam mengoordinasikan kegiatan pemerintahan, kemasyarakatan, serta pembangunan wilayah. Dalam menjalankan roda organisasi kemasyarakatan, dukungan Lembaga Pemberdayaan Masyarakat (LPM) dipimpin oleh Bapak H. Sudiyo, S.Ag., M.Pd, yang berkomitmen mendorong partisipasi warga dalam pembangunan padukuhan. Secara administratif, Padukuhan Kurahan 3 terbagi ke dalam dua Rukun Warga (RW), yaitu RW 05 yang diketuai oleh Bapak Drs. Padmana dengan wilayah RT 01 dipimpin oleh Bapak Suparjiyo dan RT 02 oleh Bapak Purwadi Sumanto, S.H., serta RW 06 yang diketuai oleh Bapak Mujino, membawahi RT 03 dengan ketua Bapak Sujendro dan RT 04 oleh Bapak Hardiyo.
-
-                    Kehidupan sosial kemasyarakatan di Padukuhan Kurahan 3 juga diperkuat oleh peran organisasi perempuan dan pemuda. PKK Padukuhan Kurahan 3 diketuai oleh Ibu Dra. Supartinah, yang aktif dalam kegiatan pemberdayaan keluarga, sosial, dan kesejahteraan masyarakat. Sementara itu, semangat generasi muda difasilitasi melalui organisasi kepemudaan yang diketuai oleh Mba Deswita, sebagai wadah pengembangan potensi, kreativitas, serta kepedulian pemuda terhadap lingkungan dan kemajuan padukuhan. Dengan sinergi antara padukuhan, lembaga kemasyarakatan, serta partisipasi aktif warga, Padukuhan Kurahan 3 terus berupaya menjadi wilayah yang tertib, mandiri, dan berorientasi pada pelayanan serta kesejahteraan masyarakat.
-            </p>
-        </div>
+{{-- Hero Section --}}
+<div class="bg-light py-5 mb-5 shadow-sm">
+    <div class="container text-center">
+        <h2 class="fw-bold">Tentang Padukuhan Kurahan 3</h2>
+        <p class="text-muted mt-2">
+            Mewujudkan wilayah yang harmonis, mandiri, dan berorientasi pada kesejahteraan masyarakat.
+        </p>
     </div>
 </div>
+
+<div class="container">
+
+    {{-- Profil Desa --}}
+    <div class="row mb-5">
+        <div class="col-md-12">
+            <div class="card border-0 shadow-sm">
+                <div class="card-body p-4">
+                    <h5 class="fw-bold mb-3">Profil Wilayah</h5>
+                    <p class="text-muted">
+                        Padukuhan Kurahan 3 merupakan salah satu wilayah padukuhan dengan luas ±27 hektar
+                        yang memiliki peran penting dalam kehidupan sosial dan pemerintahan desa.
+                        Secara geografis berbatasan dengan Kurahan IV dan Japanan (Utara),
+                        Kandangan (Selatan), Pendekan (Barat), serta Kandangan dan Japanan (Timur).
+                        Letaknya yang strategis menjadikan wilayah ini dinamis dan terus berkembang.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    {{-- Struktur Pemerintahan --}}
+    <div class="row g-4 mb-5">
+        <div class="col-md-6">
+            <div class="card h-100 border-0 shadow-sm">
+                <div class="card-body p-4">
+                    <h5 class="fw-bold mb-3">Pemerintahan Padukuhan</h5>
+                    <ul class="list-unstyled text-muted">
+                        <li><strong>Dukuh:</strong> Estu Primaningtyas Wikanthi</li>
+                        <li><strong>Ketua LPM:</strong> H. Sudiyo, S.Ag., M.Pd</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-6">
+            <div class="card h-100 border-0 shadow-sm">
+                <div class="card-body p-4">
+                    <h5 class="fw-bold mb-3">Pembagian Wilayah</h5>
+                    <ul class="text-muted">
+                        <li><strong>RW 05:</strong> Drs. Padmana
+                            <ul>
+                                <li>RT 01: Suparjiyo</li>
+                                <li>RT 02: Purwadi Sumanto, S.H.</li>
+                            </ul>
+                        </li>
+                        <li><strong>RW 06:</strong> Mujino
+                            <ul>
+                                <li>RT 03: Sujendro</li>
+                                <li>RT 04: Hardiyo</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    {{-- Organisasi --}}
+    <div class="row mb-5">
+        <div class="col-md-12">
+            <div class="card border-0 shadow-sm">
+                <div class="card-body p-4">
+                    <h5 class="fw-bold mb-3">Organisasi Kemasyarakatan</h5>
+                    <p class="text-muted">
+                        Peran organisasi masyarakat sangat mendukung pembangunan wilayah.
+                        PKK dipimpin oleh Dra. Supartinah yang aktif dalam pemberdayaan keluarga
+                        dan kesejahteraan masyarakat. Sementara itu, organisasi kepemudaan
+                        yang diketuai oleh Mba Deswita menjadi wadah pengembangan potensi
+                        dan kreativitas generasi muda.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
 @endsection
